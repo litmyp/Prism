@@ -1,0 +1,622 @@
+执行到此
+<Config {'env': <Config {'scenarios': ['ns3'], 'envs_per_scenario': 1, 'history_length': 2, 'reward': 'adpg_reward'}>, 'training': <Config {'max_num_updates': 1000, 'learning_rate': 0.01, 'gradient_clip': 0.5}>, 'agent': <Config {'save_name': 'PPO_agent', 'evaluate': True, 'agent_type': 'PPO', 'agent_features': ['action', 'adpg_reward'], 'discount': 0.99, 'linear_lr_decay': False, 'ppo': <Config {'action_multiplier_dec': 0.2, 'action_multiplier_inc': 0.2, 'discrete_actions': True, 'action_weights': [0.8, 0.95, 1, 1.05, 1.1, 1.2], 'rollout_length': 64, 'rollouts_per_batch': 4, 'use_gae': False, 'baseline_coeff': 0.5, 'entropy_coeff': 0.01, 'gae_tau': 0.95, 'use_rnn': None, 'activation_function': 'tanh', 'bias': False, 'actor_architecture': [32, 16], 'critic_architecture': [32, 16], 'params': <Config {'ppo_ratio_clip': 0.2, 'ppo_batch_size': 4, 'ppo_optimization_epochs': 4}>}>, 'adpg': <Config {'beta': 1.5, 'target': 0.064, 'scale': 12.5}>, 'checkpoint': '64803', 'distill': False, 'distill_model': 'output/distilled_agent/distilled_catboost_model_archieve.cbm', 'distill_output_type': 'discrete', 'lut': True, 'lut_path': 'output/LUT_agent/distilled_lut.npz', 'compare_nn': True}>, 'logging': <Config {'wandb': None, 'wandb_run_name': 'train_default_config', 'run_id': '', 'log_interval': 1024, 'limit_flows': False, 'limit_hosts': 3, 'limit_qps': 3}>, 'device': 'cpu'}>
+Initializing Env [0] with SHM Key: rl_env_0
+loading model from: /mnt/MI_AICC/PPO_AICC/output/PPO_agent/PPO_checkpoint_64803
+[rl_env_0] Resetting... Waiting for C++ simulation to start/write initial state...
+[rl_env_0] 等待连接共享内存...
+[rl_env_0] 成功连接到共享内存。
+[rl_env_0] Connection established. Received initial state from Host=2, Flow=1168457518
+states:tensor([[ 1.0000, -0.0041,  1.0000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.0000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=629376, cur_rate=1.0, monitor_interval_width=50000, packets_sent=596, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=629376, cur_rate=1.0, monitor_interval_width=50000, packets_sent=596, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=629376, cur_rate=1.0, monitor_interval_width=50000, packets_sent=596, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=629376, cur_rate=1.0, monitor_interval_width=50000, packets_sent=596, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=1.0038461538461538, nacks_received=0, cnps_received=0, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000, -0.0041,  1.2000, -0.0041]])
+LUT动作idx: [5] 解析: [1.2] | NN动作idx: [[5]] 解析: [1.2]
+recv raw_features: RawFeatures(rtt_packet_delay=4.054086538461538, nacks_received=0, cnps_received=125, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1168457518', host='2')
+action sent: 1.2
+states:tensor([[ 1.2000e+00, -4.0960e-03,  1.2000e+00, -6.2005e+00]])
+LUT动作idx: [1] 解析: [0.95] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=5.188701923076923, nacks_received=0, cnps_received=126, bytes_sent=638880, cur_rate=1.0, monitor_interval_width=100000, packets_sent=605, flow_tag='1375264103', host='3')
+action sent: 0.95
+states:tensor([[  1.0000, -13.1385,   1.0000, -13.1385]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=5.269471153846154, nacks_received=0, cnps_received=129, bytes_sent=648384, cur_rate=1.0, monitor_interval_width=100000, packets_sent=614, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[  1.0000, -13.7305,   1.0000, -13.7305]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=5.350240384615384, nacks_received=0, cnps_received=132, bytes_sent=658944, cur_rate=1.0, monitor_interval_width=100000, packets_sent=624, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[  1.0000, -14.3356,   1.0000, -14.3356]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=13.785576923076922, nacks_received=0, cnps_received=149, bytes_sent=600864, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=569, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[   1.2000,   -6.2005,    0.9500, -141.8600]])
+LUT动作idx: [1] 解析: [0.95] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=13.911778846153846, nacks_received=0, cnps_received=149, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='1375264103', host='3')
+action sent: 0.95
+states:tensor([[   1.0000,  -13.1385,    1.0000, -152.4676]])
+LUT动作idx: [1] 解析: [0.95] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=14.053125, nacks_received=0, cnps_received=149, bytes_sent=629376, cur_rate=1.0, monitor_interval_width=50000, packets_sent=596, flow_tag='1302525121', host='4')
+action sent: 0.95
+states:tensor([[   1.0000,  -13.7305,    1.0000, -155.9782]])
+LUT动作idx: [1] 解析: [0.95] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=14.194471153846154, nacks_received=0, cnps_received=149, bytes_sent=628320, cur_rate=1.0, monitor_interval_width=50000, packets_sent=595, flow_tag='984124284', host='5')
+action sent: 0.95
+states:tensor([[   1.0000,  -14.3356,    1.0000, -159.5288]])
+LUT动作idx: [1] 解析: [0.95] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=22.81153846153846, nacks_received=0, cnps_received=149, bytes_sent=567072, cur_rate=0.9024991989135742, monitor_interval_width=50000, packets_sent=537, flow_tag='1168457518', host='2')
+action sent: 0.95
+states:tensor([[   0.9500, -141.8600,    0.9500, -407.3112]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=22.937740384615385, nacks_received=0, cnps_received=149, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[   1.0000, -152.4676,    0.9500, -433.9273]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=23.07908653846154, nacks_received=0, cnps_received=149, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[   1.0000, -155.9782,    0.9500, -439.6859]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=23.220432692307693, nacks_received=0, cnps_received=149, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[   1.0000, -159.5288,    0.9500, -445.4825]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=31.807211538461537, nacks_received=0, cnps_received=148, bytes_sent=568128, cur_rate=0.9024991989135742, monitor_interval_width=50000, packets_sent=538, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[   0.9500, -407.3112,    1.0000, -825.2887]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=31.963701923076922, nacks_received=0, cnps_received=149, bytes_sent=600864, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=569, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[   0.9500, -433.9273,    1.0000, -877.8386]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=32.105048076923076, nacks_received=0, cnps_received=149, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[   0.9500, -439.6859,    1.0000, -886.0212]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=32.24639423076923, nacks_received=0, cnps_received=149, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[   0.9500, -445.4825,    1.0000, -894.2418]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=38.40480769230769, nacks_received=0, cnps_received=69, bytes_sent=568128, cur_rate=0.9024991989135742, monitor_interval_width=50000, packets_sent=538, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -8.2529e+02,  1.0000e+00, -1.2247e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=38.426923076923075, nacks_received=0, cnps_received=65, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -8.7784e+02,  1.0000e+00, -1.2908e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=38.47764423076923, nacks_received=0, cnps_received=62, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -8.8602e+02,  1.0000e+00, -1.2944e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=38.55769230769231, nacks_received=0, cnps_received=60, bytes_sent=599808, cur_rate=0.9499998092651367, monitor_interval_width=50000, packets_sent=568, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -8.9424e+02,  1.0000e+00, -1.3000e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32283653846154, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.2247e+03,  1.0000e+00, -1.3555e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.325240384615384, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.2908e+03,  1.0000e+00, -1.4272e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.2944e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.324278846153845, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3000e+03,  1.0000e+00, -1.4271e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33653846153846, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3555e+03,  1.0000e+00, -1.3565e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331009615384616, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4272e+03,  1.0000e+00, -1.4276e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4271e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32788461538462, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3565e+03,  1.0000e+00, -1.3559e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33677884615385, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4276e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32884615384615, nacks_received=0, cnps_received=2, bytes_sent=1702272, cur_rate=0.9024991989135742, monitor_interval_width=150000, packets_sent=1612, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3559e+03,  1.0000e+00, -1.3560e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32139423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4269e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32932692307692, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3560e+03,  1.0000e+00, -1.3560e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32716346153846, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4269e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32235576923077, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32067307692308, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3560e+03,  1.0000e+00, -1.3554e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33293269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.334375, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3554e+03,  1.0000e+00, -1.3563e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4267e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33389423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4274e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32572115384615, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3563e+03,  1.0000e+00, -1.3557e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32139423076923, nacks_received=0, cnps_received=2, bytes_sent=1799424, cur_rate=0.9499998092651367, monitor_interval_width=150000, packets_sent=1704, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4267e+03,  1.0000e+00, -1.4269e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4267e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32235576923077, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.317067307692305, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3557e+03,  1.0000e+00, -1.3551e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.325240384615384, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4269e+03,  1.0000e+00, -1.4272e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.324278846153845, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4267e+03,  1.0000e+00, -1.4271e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33076923076923, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3551e+03,  1.0000e+00, -1.3561e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331009615384616, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4272e+03,  1.0000e+00, -1.4276e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4271e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33389423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4274e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32860576923077, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3561e+03,  1.0000e+00, -1.3559e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4276e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31947115384615, nacks_received=0, cnps_received=2, bytes_sent=2399232, cur_rate=0.9499998092651367, monitor_interval_width=200000, packets_sent=2272, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4267e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32211538461539, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3559e+03,  1.0000e+00, -1.3555e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32331730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.324278846153845, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4267e+03,  1.0000e+00, -1.4271e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3555e+03,  1.0000e+00, -1.3564e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32908653846154, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4271e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32716346153846, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3564e+03,  1.0000e+00, -1.3558e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=2, bytes_sent=1799424, cur_rate=0.9499998092651367, monitor_interval_width=150000, packets_sent=1704, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3558e+03,  1.0000e+00, -1.3552e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32139423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4274e+03,  1.0000e+00, -1.4269e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.332211538461536, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3552e+03,  1.0000e+00, -1.3562e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4269e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32235576923077, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32572115384615, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3562e+03,  1.0000e+00, -1.3557e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33389423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4274e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33389423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32139423076923, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3557e+03,  1.0000e+00, -1.3554e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=2, bytes_sent=1799424, cur_rate=0.9499998092651367, monitor_interval_width=150000, packets_sent=1704, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=2, bytes_sent=1800480, cur_rate=0.9499998092651367, monitor_interval_width=150000, packets_sent=1705, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=2, bytes_sent=1800480, cur_rate=0.9499998092651367, monitor_interval_width=150000, packets_sent=1705, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33725961538462, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3554e+03,  1.0000e+00, -1.3566e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31947115384615, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4267e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33509615384615, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3566e+03,  1.0000e+00, -1.3564e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.325240384615384, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4272e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.324278846153845, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4267e+03,  1.0000e+00, -1.4271e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32860576923077, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3564e+03,  1.0000e+00, -1.3559e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4272e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4271e+03,  1.0000e+00, -1.4275e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31995192307692, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3559e+03,  1.0000e+00, -1.3553e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31947115384615, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33581730769231, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4275e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.333653846153844, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3553e+03,  1.0000e+00, -1.3563e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32043269230769, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4280e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.325, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3563e+03,  1.0000e+00, -1.3557e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33485576923077, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4279e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32235576923077, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32620192307692, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4273e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32283653846154, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3557e+03,  1.0000e+00, -1.3555e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331971153846155, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4273e+03,  1.0000e+00, -1.4277e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31947115384615, nacks_received=0, cnps_received=1, bytes_sent=6600000, cur_rate=0.9499998092651367, monitor_interval_width=550000, packets_sent=6250, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4279e+03,  1.0000e+00, -1.4268e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.316346153846155, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3555e+03,  1.0000e+00, -1.3551e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33389423076923, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4274e+03,  1.0000e+00, -1.4278e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33774038461539, nacks_received=0, cnps_received=1, bytes_sent=5999136, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5681, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4277e+03,  1.0000e+00, -1.4281e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.325240384615384, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4268e+03,  1.0000e+00, -1.4272e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33653846153846, nacks_received=0, cnps_received=1, bytes_sent=5677056, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5376, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3551e+03,  1.0000e+00, -1.3565e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.31850961538461, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4278e+03,  1.0000e+00, -1.4267e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.32235576923077, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4281e+03,  1.0000e+00, -1.4270e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.331009615384616, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4272e+03,  1.0000e+00, -1.4276e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33004807692308, nacks_received=0, cnps_received=1, bytes_sent=5678112, cur_rate=0.9024991989135742, monitor_interval_width=500000, packets_sent=5377, flow_tag='1168457518', host='2')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.3565e+03,  1.0000e+00, -1.3560e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.324278846153845, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1302525121', host='4')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4267e+03,  1.0000e+00, -1.4271e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.328125, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='984124284', host='5')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4270e+03,  1.0000e+00, -1.4274e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]
+recv raw_features: RawFeatures(rtt_packet_delay=40.33677884615385, nacks_received=0, cnps_received=1, bytes_sent=6000192, cur_rate=0.9499998092651367, monitor_interval_width=500000, packets_sent=5682, flow_tag='1375264103', host='3')
+action sent: 1
+states:tensor([[ 1.0000e+00, -1.4276e+03,  1.0000e+00, -1.4280e+03]])
+LUT动作idx: [2] 解析: [1] | NN动作idx: [[1]] 解析: [0.95]

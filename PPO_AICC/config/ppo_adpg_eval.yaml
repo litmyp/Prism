@@ -1,0 +1,66 @@
+env:
+  scenarios:
+    - "ns3"
+  envs_per_scenario: 1
+
+agent:
+  save_name: 'PPO_agent'
+  checkpoint: '64803'  #原始值3270794
+  evaluate: True
+  compare_nn: false  # 使用 LUT 控制时同时用 checkpoint 模型推理并打印
+  distill: true
+  distill_model: 'output/distilled_agent/distilled_catboost_model_archieve.cbm' #好用的，蒸馏后的决策树
+  # distill_output_type: discrete
+  # distill_model: 'output/distilled_agent/tree.cbm' # tree是github上自带的nn蒸馏得到的
+  distill_output_type: discrete
+  lut: false
+  lut_path: 'output/LUT_agent/distilled_lut.npz'
+  agent_type: PPO
+  agent_features:
+    - action
+    - adpg_reward
+  discount: .99
+  linear_lr_decay: False
+  ppo:
+    action_multiplier_dec: 0.2
+    action_multiplier_inc: 0.2
+    discrete_actions: True # 开关: false是连续控制
+    action_weights:
+      - 0.8
+      - 0.95
+      - 1
+      - 1.05
+      - 1.1
+      - 1.2
+    rollout_length: 64
+    rollouts_per_batch: 4
+    use_gae: False
+    baseline_coeff: .5
+    entropy_coeff: .01
+    gae_tau: .95
+    use_rnn: null
+    activation_function: tanh # 初始设置是relu
+    bias: False
+    actor_architecture:
+      - 32
+      - 16
+    critic_architecture:
+      - 32
+      - 16
+    params:
+      ppo_ratio_clip: .2
+      ppo_batch_size: 4
+      ppo_optimization_epochs: 4
+  adpg:
+    beta: 1.5
+    target: 0.064
+    scale: 12.5
+
+logging:
+  wandb: false  # Logging using weights and biases
+  wandb_run_name: test  # Logging using weights and biases
+  run_id: ''
+  log_interval: 1024 # The minimum number of iterations before each log occurs
+  limit_flows: False
+  limit_hosts: 3
+  limit_qps: 3

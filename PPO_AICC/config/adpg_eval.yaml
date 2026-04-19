@@ -1,0 +1,19 @@
+env:
+  scenarios:
+    - "ns3"
+  envs_per_scenario: 1
+
+
+agent:
+  save_name: ''
+  checkpoint: ''  #原始值3270794
+  evaluate: True
+
+logging:
+  wandb: false  # Logging using weights and biases
+  wandb_run_name: test  # Logging using weights and biases
+  run_id: ''
+  log_interval: 1024 # The minimum number of iterations before each log occurs
+  limit_flows: False
+  limit_hosts: 3
+  limit_qps: 3
